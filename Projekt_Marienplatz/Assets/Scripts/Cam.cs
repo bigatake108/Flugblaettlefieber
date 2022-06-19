@@ -25,7 +25,8 @@ public class Cam : MonoBehaviour
     void Update()
     {
         this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10); //z muss -10 sein!
-
+        Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel")*10;
+        
         float posX = Camera.main.transform.position.x;
         float posY = Camera.main.transform.position.y;
 
