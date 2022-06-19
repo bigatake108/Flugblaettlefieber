@@ -90,15 +90,40 @@ public class Leaflets : MonoBehaviour
             "040",
             new Gender[] { Gender.Female, Gender.Male },
             new Job[] { Job.Employee, Job.Worker, Job.Farmer },
-            new Religion[] { Religion.Atheist, Religion.Jewish, Religion.Protestant},
+            new Religion[] { Religion.Atheist, Religion.Jewish, Religion.Protestant },
             new CivilStatus[] { CivilStatus.Married, CivilStatus.Single, CivilStatus.Widowed },
             new PoliticalStance[] { PoliticalStance.Liberal, PoliticalStance.Left },
             new Party[] { Party.USPD, Party.MSPD }
             );
+        leafletArray[5] = new Leaflet(
+            "045",
+            new Gender[] { Gender.Female, Gender.Male },
+            new Job[] { Job.Employee, Job.Worker, Job.Officer, Job.Capitalist },
+            new Religion[] { Religion.Atheist, Religion.Jewish, Religion.Protestant },
+            new CivilStatus[] { CivilStatus.Married, CivilStatus.Single, CivilStatus.Widowed },
+            new PoliticalStance[] { PoliticalStance.Liberal, PoliticalStance.Conservative },
+            new Party[] { Party.DDP, Party.WBWB, Party.Zentrum, Party.Buergerpartei }
+            );
+        leafletArray[6] = new Leaflet(
+            "052",
+            new Gender[] { Gender.Male },
+            new Job[] { Job.Soldier },
+            new Religion[] { Religion.Atheist, Religion.Jewish, Religion.Protestant },
+            new CivilStatus[] { CivilStatus.Married, CivilStatus.Single, CivilStatus.Widowed },
+            new PoliticalStance[] { PoliticalStance.Liberal, PoliticalStance.Conservative },
+            new Party[] { Party.DDP, Party.WBWB, Party.Zentrum, Party.Buergerpartei }
+            );
+        leafletArray[7] = new Leaflet(
+            "053",
+            new Gender[] { Gender.Female, Gender.Male },
+            new Job[] { Job.Unemployed, Job.Soldier },
+            new Religion[] { Religion.Jewish, Religion.Protestant },
+            new CivilStatus[] { CivilStatus.Married, CivilStatus.Single, CivilStatus.Widowed },
+            new PoliticalStance[] { PoliticalStance.Liberal, PoliticalStance.Conservative },
+            new Party[] { Party.DDP, Party.MSPD, Party.Zentrum, Party.Buergerpartei }
+            );
 
-
-
-        // spriteRenderer.sprite = leafletArray[currentLeafletIndex].sprite;
+        currentLeafletIndex = Random.Range(0, 8);
         
         placehere.texture = leafletArray[currentLeafletIndex].sprite;
     }
