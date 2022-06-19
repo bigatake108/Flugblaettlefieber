@@ -13,10 +13,7 @@ public class Player : MonoBehaviour
     GameObject leafletsObject;
     Leaflets leafletsScript;
 
-    public int score = 0;
-
-    /*readonly int mapMaxHorizontal = 650;
-    readonly int mapMaxVertical = 350;*/
+    public static int score = 0;
 
     // Start is called before the first frame update
     void Start()

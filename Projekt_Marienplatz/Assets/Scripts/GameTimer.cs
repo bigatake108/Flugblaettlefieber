@@ -24,20 +24,20 @@ public class GameTimer : MonoBehaviour
         }
 
 
-        /*
-        if (timeElapsed > delay && 1000 > playerScript.score) 
+        
+        if (timeElapsed > delay && 100 > Player.score) 
         {
             SceneManager.LoadScene("EndScreen1");
         } 
-        else if (timeElapsed > delay && playerScript.score > 1000 && 2000 > playerScript.score) 
+        else if (timeElapsed > delay && Player.score > 100 && 300 > Player.score) 
         {
             SceneManager.LoadScene("EndScreen2");
         }
-        else if (timeElapsed > delay && playerScript.score > 2000) 
+        else if (timeElapsed > delay && Player.score > 300) 
         {
             SceneManager.LoadScene("EndScreen3");
         }
-        */
+        
 
     }
 }

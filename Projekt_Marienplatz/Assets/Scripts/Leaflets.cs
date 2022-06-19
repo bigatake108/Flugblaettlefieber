@@ -97,8 +97,7 @@ public class Leaflets : MonoBehaviour
             );
 
 
-
-        // spriteRenderer.sprite = leafletArray[currentLeafletIndex].sprite;
+        currentLeafletIndex = Random.Range(0, 5);
         
         placehere.texture = leafletArray[currentLeafletIndex].sprite;
     }
