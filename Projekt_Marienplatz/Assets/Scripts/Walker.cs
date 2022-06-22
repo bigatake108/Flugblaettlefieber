@@ -14,10 +14,11 @@ public class Walker : MonoBehaviour
 
     GameObject player;
     Player playerScript;
-    float reachOfPlayer = 22f;
+    static float reachOfPlayer = 22f;
     public float distFromPlayer;
 
-    public bool hasReceivedLeaflet = false;
+    //public bool hasReceivedLeaflet = false;
+    //public bool hasBeenGreeted = false;
 
     UnityEngine.AI.NavMeshAgent agent;
 
@@ -64,8 +65,10 @@ public class Walker : MonoBehaviour
     Sprite[] characterSpritesFemale = new Sprite[8];
     [SerializeField]
     Sprite[] accessoireSprites = new Sprite[3];
-    
 
+    static GreetingText[] greetings;
+    enum InteractionState  {None, Greeted, OwningLeaflet}
+    InteractionState interactionState;
 
     // Start is called before the first frame update
     void Start()
@@ -95,7 +98,7 @@ public class Walker : MonoBehaviour
         generateCharacterTraits();
         generateCharacterAppearance();
 
-
+        interactionState = InteractionState.None;
     }
 
     // Update is called once per frame
@@ -119,7 +122,7 @@ public class Walker : MonoBehaviour
     }
 
     //This will generate normal distributed random floats given the mean and standard deviation of the distribution
-    float box_muller(float mean, float stdDev)
+    static float box_muller(float mean, float stdDev)
     {
         float u1 = 1.0f - Random.value;
         float u2 = 1.0f - Random.value;
@@ -357,34 +360,36 @@ public class Walker : MonoBehaviour
         }
     }
 
+    public void respondToPlayer(Leaflets.Leaflet currentLeaflet)
+    {
+        switch (interactionState)
+        {
+            case InteractionState.None:
+                greetPlayer();
+                interactionState = InteractionState.Greeted;
+                break;
+            case InteractionState.Greeted:
+                rewardLeaflet(currentLeaflet);
+                interactionState = InteractionState.OwningLeaflet;
+                break;
+            case InteractionState.OwningLeaflet:
+                respondAlreadyReceivedLeaflet();
+                break;
+        }
 
-    public int rewardLeaflet(Leaflets.Leaflet currentLeaflet)
+    }
+
+    public void greetPlayer()
+    {
+        Debug.Log("Hallo");
+    }
+    public void rewardLeaflet(Leaflets.Leaflet currentLeaflet)
     {
         // TODO kriegsversehrt hineinnehmen? -> Flugblätter taggen
+
         float politicalStance_leaf = 0f; //TODO!!
 
 
-        //evaluates evaluation difference
-        float evalDiff(float leaf, float walk)
-        {
-            float diff = 0f;
-            if (leaf < walk)
-            {
-                diff = walk - leaf;
-            }
-            else
-            {
-                diff = leaf - walk;
-            }
-            // Sets threshhold to maximum of 3, then if higher, the evaluated bonus gets negative
-            float thresh = 3f - diff;
-            // Adds some tiny randomness for fun
-            return box_muller(1f, 0.2f) * thresh;
-        }
-
-        // need to implement reward function. Always returns 1 or 0 for now.
-        if (!hasReceivedLeaflet)
-        {
             float factor = 0f;
             if (isInArray(gender,currentLeaflet.Genders))
             {
@@ -429,19 +434,25 @@ public class Walker : MonoBehaviour
             int numOfIntersectingParties = intersectingParties.Count();
             factor += numOfIntersectingParties;
 
-            hasReceivedLeaflet = true;
+            interactionState = InteractionState.OwningLeaflet;
 
-            return Mathf.Max(0, (int)factor * 10);
-        }
-        return 0;
+            Debug.Log(Mathf.Max(0, (int)factor * 10));
+            playerScript.applyReward(Mathf.Max(0, (int)factor * 10));
+        
+        playerScript.applyReward(0);
     }
 
-    T getRandomElement<T>(T[] tarray)
+    void respondAlreadyReceivedLeaflet()
+    {
+        Debug.Log("Hab schon");
+    }
+
+    static T getRandomElement<T>(T[] tarray)
     {
         return tarray[Random.Range(0, tarray.Length)];
     }
 
-    bool isInArray<T>(T element, T[] array)
+    static bool isInArray<T>(T element, T[] array)
     {
         foreach (T el in array)
         {

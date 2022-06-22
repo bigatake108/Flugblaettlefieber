@@ -53,3 +53,6 @@ TagManager:
   - name: Way Points
     uniqueID: 2765046647
     locked: 0
+  - name: UI
+    uniqueID: 1174594655
+    locked: 0

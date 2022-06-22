@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            giveLeaflet();
+            interactWithWalker();
         }
     }
 
@@ -40,23 +40,12 @@ public class Player : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector2 translationVector = new Vector2(horizontalInput * speed, verticalInput * speed) * Time.fixedDeltaTime;
-
-
-        /*float camHeight = Camera.main.orthographicSize;
-        float camWidth = camHeight * Camera.main.aspect;
-        float posX = transform.position.x;
-        float posY = transform.position.y;
-        bool isNotAllowedToMove =
-               (posY - camHeight > -mapMaxVertical && rbody.velocity.y <= 0)
-            || (posY + camHeight < mapMaxVertical && rbody.velocity.y > 0)
-            || (posX - camWidth > -mapMaxHorizontal && rbody.velocity.x <= 0)
-            || (posX + camWidth < mapMaxHorizontal && rbody.velocity.x > 0);*/
         
         rbody.MovePosition(rbody.position + translationVector);
        
     }
 
-    void giveLeaflet()
+    void interactWithWalker()
     {
         Leaflets.Leaflet currentLeaflet = leafletsScript.leafletArray[leafletsScript.currentLeafletIndex];
 
@@ -64,8 +53,15 @@ public class Player : MonoBehaviour
         {
             Walker walkerScript = talkingWaker.GetComponent<Walker>();
 
+            walkerScript.respondToPlayer(currentLeaflet);
+
             // TODO wenn reward gleich null -> Zeitmalus
-            score += walkerScript.rewardLeaflet(currentLeaflet);
+            // score += walkerScript.rewardLeaflet(currentLeaflet);
         }
+    }
+
+    public void applyReward(int reward)
+    {
+        score += reward;
     }
 }
