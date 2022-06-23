@@ -420,7 +420,6 @@ public class Walker : MonoBehaviour
         }
 
         greeting = firstName + " " + "(" + age + "): " + "»" + greeting + "«";
-        Debug.Log(greeting);
         speechBubbleText.text = greeting;
     }
     public void rewardLeaflet(Leaflets.Leaflet currentLeaflet)
@@ -478,13 +477,12 @@ public class Walker : MonoBehaviour
             Debug.Log(Mathf.Max(0, (int)factor * 10));
             playerScript.applyReward(Mathf.Max(0, (int)factor * 10));
         
-        playerScript.applyReward(0);
+        
     }
 
     void respondAlreadyReceivedLeaflet()
     {
         speechBubbleText.text = "Ich habe schon ein Flugblatt bekommen!";
-        Debug.Log("Ich habe schon ein Flugblatt bekommen!");
     }
 
     static T getRandomElement<T>(T[] tarray)

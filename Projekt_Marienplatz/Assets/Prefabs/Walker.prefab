@@ -366,7 +366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  - {fileID: -3919432321850283927, guid: 9c87e19ae13d5cd409487b3e92f60df9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -408,14 +408,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"Wenn diese Preissteigerungen weiter anhalten und der Staat immer weiter
-    druckt, wird das Geld bei uns im Tresor in naher Zukunft schon nichts mehr Wert
-    sein, die Leute werden ihre W\xE4nde damit tapezieren. Ach, so ein Quatsch, es
-    wird schon nicht so weit kommen. Was kann ich eigentlich f\xFCr dich tun, m\xF6chtest
-    du ein Konto bei uns er\xF6ffnen, ich mach dir ein gutes Angebot.\""
+  m_text: "\"Wenn ich nur daran denke, wie viel der Staat gerade druckt, wird mir
+    ganz schwindelig. Ich wei\xDF gar nicht ob unsere R\xE4ume f\xFCr so viel Geld
+    ausgelegt sind. Oh Nein, im schlimmsten Fall gibt es einen baldigen Ansturm,
+    weil jeder seine Ersparnisse retten will, wie soll das alles nur enden? Aber
+    du mein junger Freund mach dir keine Sorgen, ich mach dir einen Kredit zu guten
+    Konditionen, ich sehe hast du schon ein St\xFCck Papier dabei, wir k\xF6nnen
+    gleich den Vertrag aufsetzen.\""
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c87e19ae13d5cd409487b3e92f60df9, type: 2}
+  m_sharedMaterial: {fileID: -3919432321850283927, guid: 9c87e19ae13d5cd409487b3e92f60df9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -475,7 +477,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.111597, y: 2.1819706, z: -0.5580902, w: -2.8023243}
+  m_margin: {x: 1.8669567, y: 0.93697166, z: -0.5580902, w: -2.8023243}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

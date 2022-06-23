@@ -68,9 +68,11 @@ public class Player : MonoBehaviour
 
     public void applyReward(int reward)
     {
-         if (reward > 0) {
+        if (reward > 0) {
             rewardSound.Play();
-        } else {
+        } 
+        else 
+        {
             denySound.Play();
         }
         score += reward;
