@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.IO;
+using TMPro;
 
 public class Walker : MonoBehaviour
 {
@@ -69,6 +70,8 @@ public class Walker : MonoBehaviour
     [SerializeField]
     TextAsset jsonGreetingsFile;
     public static Greetings greetings;
+
+    TMP_Text speechBubble;
     
     enum InteractionState  {None, Greeted, OwningLeaflet}
     InteractionState interactionState;
@@ -100,7 +103,8 @@ public class Walker : MonoBehaviour
 
         string jsonGreetings = jsonGreetingsFile.ToString();
         greetings = JsonUtility.FromJson<Greetings>(jsonGreetings);
-        
+
+        speechBubble = GetComponentInChildren<TMP_Text>();
 
         generateCharacterTraits();
         generateCharacterAppearance();
@@ -364,6 +368,7 @@ public class Walker : MonoBehaviour
             }
             agent.isStopped = false;
             outlineSprite.enabled = false;
+            speechBubble.text = "";
         }
     }
 
@@ -409,7 +414,9 @@ public class Walker : MonoBehaviour
             greeting = "Guten Tag.";
         }
 
-        Debug.Log(firstName + " " + "(" + age + "): " + "»" + greeting + "«");
+        greeting = firstName + " " + "(" + age + "): " + "»" + greeting + "«";
+        Debug.Log(greeting);
+        speechBubble.text = greeting;
     }
     public void rewardLeaflet(Leaflets.Leaflet currentLeaflet)
     {
@@ -464,6 +471,7 @@ public class Walker : MonoBehaviour
 
             interactionState = InteractionState.OwningLeaflet;
 
+        speechBubble.text = "";
             Debug.Log(Mathf.Max(0, (int)factor * 10));
             playerScript.applyReward(Mathf.Max(0, (int)factor * 10));
         
@@ -472,7 +480,8 @@ public class Walker : MonoBehaviour
 
     void respondAlreadyReceivedLeaflet()
     {
-        Debug.Log("Hab schon");
+        speechBubble.text = "Ich habe schon ein Flugblatt bekommen!";
+        Debug.Log("Ich habe schon ein Flugblatt bekommen!");
     }
 
     static T getRandomElement<T>(T[] tarray)
