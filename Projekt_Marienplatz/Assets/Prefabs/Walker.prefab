@@ -72,7 +72,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distFromPlayer: 0
-  hasReceivedLeaflet: 0
   firstName: 
   gender: 0
   education: 0
@@ -107,6 +106,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 99610ff810914c246bd3d0eda7cbc7bb, type: 3}
   - {fileID: 21300000, guid: d783a520f829f7b4cbdfa878d0a39591, type: 3}
   - {fileID: 21300000, guid: cfa9403bd26ee524cac6d8fcd740a604, type: 3}
+  jsonGreetingsFile: {fileID: 4900000, guid: 6a19e563ede78c547b12017f6ae7a2de, type: 3}
 --- !u!50 &7589204899401289658
 Rigidbody2D:
   serializedVersion: 4

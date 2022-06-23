@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using System.IO;
 
 public class Walker : MonoBehaviour
 {
@@ -66,7 +66,10 @@ public class Walker : MonoBehaviour
     [SerializeField]
     Sprite[] accessoireSprites = new Sprite[3];
 
-    static GreetingText[] greetings;
+    [SerializeField]
+    TextAsset jsonGreetingsFile;
+    public static Greetings greetings;
+    
     enum InteractionState  {None, Greeted, OwningLeaflet}
     InteractionState interactionState;
 
@@ -94,6 +97,10 @@ public class Walker : MonoBehaviour
         bodySprite = bodyObject.GetComponent<SpriteRenderer>();
         outlineSprite = outlineObject.GetComponent<SpriteRenderer>();
         accessoireSprite = accessoireObject.GetComponent<SpriteRenderer>();
+
+        string jsonGreetings = jsonGreetingsFile.ToString();
+        greetings = JsonUtility.FromJson<Greetings>(jsonGreetings);
+        
 
         generateCharacterTraits();
         generateCharacterAppearance();
@@ -381,7 +388,28 @@ public class Walker : MonoBehaviour
 
     public void greetPlayer()
     {
-        Debug.Log("Hallo");
+        int numOfGreetings = greetings.greetings.Length;
+        GreetingText[] applicableGreetings = (from g in greetings.greetings where g.job == job.ToString() select g).ToArray();
+        string greeting;
+
+        if (applicableGreetings.Length > 0)
+        {
+            int ranIndex = Random.Range(0, applicableGreetings.Length);
+            if(Random.Range(0, 2) == 0)
+            {
+                greeting = applicableGreetings[ranIndex].alternative1;
+            }
+            else
+            {
+                greeting = applicableGreetings[ranIndex].alternative2;
+            }
+        }
+        else
+        {
+            greeting = "Guten Tag.";
+        }
+
+        Debug.Log(firstName + " " + "(" + age + "): " + "»" + greeting + "«");
     }
     public void rewardLeaflet(Leaflets.Leaflet currentLeaflet)
     {
@@ -423,7 +451,7 @@ public class Walker : MonoBehaviour
 
             if (isInArray(civilStatus, currentLeaflet.CivilStatuses))
             {
-                factor --;
+                factor ++;
             }
 
             //factor += evalDiff(politicalStance_leaf, politicalStance);

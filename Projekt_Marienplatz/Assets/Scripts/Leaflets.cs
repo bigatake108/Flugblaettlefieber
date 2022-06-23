@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.AddressableAssets;
-//using UnityEngine.ResourceManagement.AsyncOperations;
 using static Walker;
 
 public class Leaflets : MonoBehaviour
@@ -35,14 +33,15 @@ public class Leaflets : MonoBehaviour
     [SerializeField]
     public Leaflet[] leafletArray = new Leaflet[25];
 
-    [SerializeField]
-    public int currentLeafletIndex = 2;
+    public int currentLeafletIndex;
 
     SpriteRenderer spriteRenderer;
 
     public string[] spriteNames = {"017", "019", "022", "026", "040", "045", "052", "053", "054", "058", "062", "069a", "071a", "076", "082", "058", "090", "104", "105", "107", "129a", "132", "152", "155a", "159a" };
     
     public RawImage placehere;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -126,6 +125,8 @@ public class Leaflets : MonoBehaviour
         currentLeafletIndex = Random.Range(0, 8);
         
         placehere.texture = leafletArray[currentLeafletIndex].sprite;
+
+
     }
 
     // Update is called once per frame

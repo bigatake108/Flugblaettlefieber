@@ -1,0 +1,95 @@
+﻿{
+	"greetings" :
+	[
+		{
+			"occupation" : "Arbeiter",
+			"job" : "Worker",
+			"alternative1" : "Wie schön ist es mal einen freien Tag in der Woche zu haben, die Maschinengeräusche können auf die Dauer extrem lästig werden. Immer dieser Krach, da platzt einem der Schädel. Ich träume manchmal Abends vom Band so schlimm steht es schon um mich. Wie kann ich dir helfen?",
+			"alternative2" : "Was ein wunderschöner sonniger Tag, weißt du in der Fabrik bekommen wir wirklich nicht so viel mit von dem schönen Wetter hier draußen. Ich denke ich lege mich nachher in den Park, mein Rücken wird es mir danken. Apropo Rücken, wir als Arbeiter bilden das Rückgrat der Industrie ohne uns läuft gar nichts. Was hast du da eigentlich für mich?"
+		},
+		{
+			"occupation" : "Angestellter",
+			"job" : "Employee",
+			"alternative1" : "Schön, dass die Arbeit heute auch mal ruhen kann. Obwohl ich schon sagen muss, dass wir besser dran sind als die armen Fabrikarbeiter. Unsers ist eben mehr die Kopfarbeit, die aber sicherlich auch nicht für jedermann ist. Oh, was hast du da in der Hand, gib es mir mal bitte, dann kann ich es mir auch durchlesen.",
+			"alternative2" : "Auch wenn heute frei ist, muss ich nachher noch so viel machen. Dass die Leute denken, dass das Gewerbe ruht... Es passiert so viel hinter den Kulissen an unseren Schreibstuben, was die Leute gar nicht sehen. Der ganze Papierkram, und jetzt kommst du auch noch mit nem weiteren Zettel zu mir, was willst du?"
+		},
+		{
+			"occupation" : "Soldat",
+			"job" : "Soldier",
+			"alternative1" : "Aus dem Weg, da hinten versammeln sich ein paar Unruhestifter. Wir müssen schnell einschreiten bevor etwas passiert, oder denkst du, dass dein Anliegen dringender ist?",
+			"alternative2" : "Schön das es heute so ruhig ist, das hatten wir leider in letzter Zeit viel zu selten mit den ganzen Streiks. So lässt es sich aushalten, sag mal was hast du da eigentlich für mich?"
+		},
+		{
+			"occupation" : "Handwerker",
+			"job" : "Worker",
+			"alternative1" : "Die Woche war so anstrengend, der Meister hat uns mal wieder ganz schön hart dran genommen, aber solange das Geld stimmt, will ich mich auch nicht beschweren. Es hat auch was Schönes täglich an der freien Luft zu arbeiten, ich könnte das nicht wie diese Stubenhocker den ganzen Tag hinter dem Schreibtisch. Was hast du da eigentlich in der Hand?",
+			"alternative2" : "Schön einen freien Tag zu haben, aber ich muss schon die ganze Zeit an Montag denken. Die Aufträge stapeln sich schon wieder, wir kommen gar nicht mehr hinterher. Aber es hat doch etwas sehr Befriedigendes mit seinen Händen zu arbeiten und zu sehen wie etwas entsteht. Wie kann ich dir eigentlich weiter helfen, hast du da einen weiteren Auftrag für mich?"
+		},
+		{
+			"occupation" : "Landwirt",
+			"job" : "Farmer",
+			"alternative1" : "Schon schön hier in der Großstadt, aber waren sie schon mal bei uns auf dem Land, für nichts würde ich meinen Frieden dort hergeben. Es ist interessant dieses Getümmel hier zu sehen, aber das wäre nichts für mich. Mir fehlt der Stallgeruch und die grünen Weiten. Was kann ich eigentlich für dich tun?",
+			"alternative2" : "Hier laufen sie so herum, als ob das Essen vom Himmel regnet und wer schuftet dafür Tag und Nacht, wir die vom Land. Freier Tag in der Woche, dass ich nicht lache, so etwas kennen wir gar nicht, die Kühe wollen jeden Tag versorgt werden, die machen auch nicht frei. Vielleicht spricht da aus mir auch nur der Neid, wer weiß. Hast du da etwas für mich?"
+		},
+		{
+			"occupation" : "Bänker",
+			"job" : "Capitalist",
+			"alternative1" : "Wenn diese Preissteigerungen weiter anhalten und der Staat immer weiter druckt, wird das Geld bei uns im Tresor in naher Zukunft schon nichts mehr Wert sein, die Leute werden ihre Wände damit tapezieren. Ach, so ein Quatsch, es wird schon nicht so weit kommen. Was kann ich eigentlich für dich tun, möchtest du ein Konto bei uns eröffnen, ich mach dir ein gutes Angebot.",
+			"alternative2" : "Wenn ich nur daran denke, wie viel der Staat gerade druckt, wird mir ganz schwindelig. Ich weiß gar nicht ob unsere Räume für so viel Geld ausgelegt sind. Oh Nein, im schlimmsten Fall gibt es einen baldigen Ansturm, weil jeder seine Ersparnisse retten will, wie soll das alles nur enden? Aber du mein junger Freund mach dir keine Sorgen, ich mach dir einen Kredit zu guten Konditionen, ich sehe hast du schon ein Stück Papier dabei, wir können gleich den Vertrag aufsetzen."
+		},
+		{
+			"occupation" : "Industrieller",
+			"job" : "Capitalist",
+			"alternative1" : "Was für ein schöner Sonntag, ich denke am Ende war es doch besser den Arbeitern einen freien Tag zu geben, auch wenn ich dem am Anfang kritisch gegenüber stand. Dann können sie am Montag wieder aus den vollen schöpfen. Ich meine die Konkurrenz im Ausland schläft ja auch nicht. Zeit ist Geld, apropos Zeit ist Geld. Wofür willst du meine Zeit beanspruchen?",
+			"alternative2" : "Was willst du von mir, ist das wieder so ein Flugblatt, das zum Streiken aufruft. Ich kann es nicht mehr sehen, es werden doch täglich irgendwelche Gesetze für die Arbeiterschaft erlassen und trotzdem bekommen sie nie den Hals voll, na ja gib mal her, ich will mir anschauen was sie jetzt schon wieder fordern."
+		},
+		{
+			"occupation" : "Beamter",
+			"job" : "Officer",
+			"alternative1" : "Und morgen wieder hinter den Schreibtisch, es ödet mich an, jeden Tag dasselbe, hier eine Unterschrift, dort ein Formular, dort irgend eine Ausnahme, der Papierkram im Amt wird auch nicht weniger. Man könnte die Leute machen das mit Absicht, aber man muss am Ende leider alles dokumentieren. Wie ich sehe, hast du auch ein Dokument in deiner Hand, hast du überhaupt die Erlaubnis dafür?",
+			"alternative2" : "Auch wenn der Ausdruck Paragraphenreiter abwertend gemeint ist, bin ich stolz auf meinen Beruf. Ohne uns würde doch im Staat nicht s funktionieren, die totale Anarchie würde ausbrechen. Nein, nein, nein, das können wir nicht zu lassen. Oder was denkst du, na ja ihr jungen Leute denkt da bestimmt eh anders. Gib mal her, ich seh doch das du mir etwas geben willst."
+		},
+		{
+			"occupation" : "Arzt",
+			"job" : "Officer",
+			"alternative1" : "Zum Glück konnten wir die Praxis heute mal schließen, wir hatten in den letzten Wochen so viel zu tun mit den ganzen Streiks und Unruhen, dass die Leute aber auch nicht friedlich bleiben können. Aber ich darf mich nicht beschweren, ich meine ich habe es mir so ausgesucht und ich liebe meinen Beruf. Menschen zu helfen ist meine Berufung. Was kann ich für dich tun, bist du verletzt?",
+			"alternative2" : "Hallo, ich muss schnell weiter, ich hab nur eine kurze Pause und wollte ein wenig die Sonne genießen, bevor ich wieder in den OP- Saal muss. Wir hatten so viel zu tun in letzter Zeit, die Verletzten stapeln sich schon bei uns. Deswegen wenn du etwas für mich hast, dann gib es mir bitte, ich möchte dann meine Pause weiter in Ruhe genießen."
+		},
+		{
+			"occupation" : "Apotheker",
+			"job" : "Officer",
+			"alternative1" : "Sie tun mir leid die ganzen Kriegsversehrten, vor allem ihre Abhängigkeit nach Schmerzmitteln. Hätte man nur damals im Krieg schon andere Mittel gehabt, es würde ihnen besser gehen. Na ja, leider kann man das wohl nicht ändern. Du hast da einen Zettel in der Hand, der ist bestimmt für mich.",
+			"alternative2" : "Gestern wurde bei einem Kollegen von mir in die Apotheke eingebrochen, die Leute werden aber auch immer dreister oder verzweifelter. Es gibt leider aktuell nicht genug Medikamente für alle, wir haben nun einmal schwierige Zeiten, aber ich finde wir sollten trotzdem versuchen das Beste daraus zu machen, oder findest du nicht. Kann ich dir eigentlich irgendwie weiter helfen, oder wieso bist du zu mir gekommen?"
+		},
+		{
+			"occupation" : "Pfleger",
+			"job" : "Worker",
+			"alternative1" : "Die Ärzte beschweren sich immer, dass sie so viel zu tun haben, obwohl wir die eigentliche Knochenarbeit haben. Wir müssen die Patienten herum tragen und waschen. Die Bezahlung sie könnte besser sein, aber ich vertraue auf die Zukunft, es wird schon bessern. Gib mir mal den Zettel, meine Pause ist auch gleich wieder vorbei.",
+			"alternative2" : "Es ist so schön jeden Tag mit Menschen zu arbeiten, ich könnte das nicht Tag ein, Tag aus mit Maschinen zu arbeiten, ich denke mir würde das Zwischenmenschliche fehlen. Die Bezahlung na ja, hoffen wir mal auf die Zukunft. Vielleicht erkennen die Menschen wie wichtig unser Beruf ist. Wie kann ich dir eigentlich weiter helfen?"
+		},
+		{
+			"occupation" : "Techniker",
+			"job" : "Officer",
+			"alternative1" : "Siehst du die Uhr da hinten am Glockenturm, ein technisches Meisterwerk, ich könnte ihr stundenlang zuschauen. Schon faszinierend was kleine Rädchen und Getriebe in Zusammenarbeit alles schaffen können. Ich liebe den Fortschritt. Was ist das den eigentlich in deiner Hand, eine Technische Zeichnung?",
+			"alternative2" : "Hallo mein junger Freund, sag mal bist du nicht auch so fasziniert von all den technischen Errungenschaften unserer Zeit, sieh da, dass nächste Auto, das hier durchfährt. Aber wir dürfen auch die negativen Seiten des Fortschrittes nicht vergessen, es ist noch gar nicht so lange her. Jetzt bin ich nachdenklich geworden, hast du vielleicht etwas, dass meine Stimmung wieder aufhellt?"
+		},
+		{
+			"occupation" : "Rechtsanwalt",
+			"job" : "Officer",
+			"alternative1" : "Wir hatten in letzter Zeit mit so vielen Fällen von Sachbeschädigung zu tun, den Papierkram liegt bergeweise auf meinem Schreibtisch. Ich hoffe das in deiner Hand hat nichts mit Gesetzen oder Paragraphen zu tun, heute habe ich meinen freien Tag, also verschone mich bitte, oder welcher Art ist dein Anliegen?",
+			"alternative2" : "Wir als die Hüter des Rechtes sind essentiell für die Ablauf und Funktionsfähigkeit von allem. Was wären wir nur ohne das Gesetz, Terror und Anarchie würde herrschen. Obwohl ich manchmal das Gefühle das wir in diesen stürmischen Zeiten, immer mal wieder knapp am Chaos vorbei schrammen. Ich hoffe es wird nicht schlimmer werden. Was hast du da eigentlich in der Hand?"
+		},	
+		{
+			"occupation" : "Haushaltshilfe",
+			"job" : "Employee",
+			"alternative1" : "Schnell aus dem Weg ich muss heim und das Essen aufsetzen, die Familie bekommt heute hohen Besuch und alles muss perfekt sein, sonst bekomme ich wieder eine Rüge. Und es ist jetzt schon so ein Knochenjob, ich muss als erste aufstehen und das Wasser warm machen und mehr. Na ja, genug von mir, du wolltest doch bestimmt etwas von mir, oder?",
+			"alternative2" : "Bin ich froh, dass die Herren mir wenigstens den Sonntag frei geben, etwas das alles andere als selbstverständlich ist. Wenn ich ab und an die Zeit habe und mich raus schleichen kann, genehme ich mir den einen oder anderen Zug von der Zigarette, die Kinder rauben einem den letzten Nerv. Was willst du eigentlich von mir, siehst du nicht das ich frei habe?"
+		},
+			{
+			"occupation" : "Pensionsabhängiger",
+			"job" : "Unemployed",
+			"alternative1" : "Wo andere einen Grund haben den Feiertag zu genießen, wünschte ich mir, ich hätte ihn auch, aber keiner stellt so Leute wie uns ein, keiner hat Verwendung für uns, obwohl wir genauso ein Teil dieser Gesellschaft bilden. Ein Skandal, aber wir kleinen Fische können da leider nicht s dran ändern. Sag mal, was trägst du da eigentlich mit dir hier herum?",
+			"alternative2" : "Sag mal, hast du mir vielleicht ein paar Münzen, meine Pension ist so niedrig, sie reicht vorne und hinten nicht. Wie soll man so nur leben? Wir haben alles gegeben und jetzt sieh uns an, verarmt und verkrüppelt müssen wir in der Straße sitzen und um jeden Pfennig kämpfen. Ich hoffe es kommen bessere Zeiten. Hast du vielleicht etwas um mich auf andere Gedanken zu bringen?"
+		}
+	]
+}
