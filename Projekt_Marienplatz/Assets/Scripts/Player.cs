@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
     public bool isTalkingToWalker = false;
     public GameObject talkingWaker;
 
+    [SerializeField] 
+    private AudioSource rewardSound;
+
+    [SerializeField] 
+    private AudioSource denySound;
+
     GameObject leafletsObject;
     Leaflets leafletsScript;
 
@@ -62,6 +68,11 @@ public class Player : MonoBehaviour
 
     public void applyReward(int reward)
     {
+         if (reward > 0) {
+            rewardSound.Play();
+        } else {
+            denySound.Play();
+        }
         score += reward;
     }
 }
