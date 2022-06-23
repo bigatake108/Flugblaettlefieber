@@ -18,8 +18,6 @@ public class Walker : MonoBehaviour
     static float reachOfPlayer = 22f;
     public float distFromPlayer;
 
-    //public bool hasReceivedLeaflet = false;
-    //public bool hasBeenGreeted = false;
 
     UnityEngine.AI.NavMeshAgent agent;
 
@@ -71,7 +69,8 @@ public class Walker : MonoBehaviour
     TextAsset jsonGreetingsFile;
     public static Greetings greetings;
 
-    TMP_Text speechBubble;
+    TMP_Text speechBubbleText;
+    SpriteRenderer speechBubbleSprite;
     
     enum InteractionState  {None, Greeted, OwningLeaflet}
     InteractionState interactionState;
@@ -104,7 +103,9 @@ public class Walker : MonoBehaviour
         string jsonGreetings = jsonGreetingsFile.ToString();
         greetings = JsonUtility.FromJson<Greetings>(jsonGreetings);
 
-        speechBubble = GetComponentInChildren<TMP_Text>();
+        speechBubbleText = GetComponentInChildren<TMP_Text>();
+        speechBubbleSprite = transform.Find("SpeechBubble").gameObject.GetComponent<SpriteRenderer>();
+        speechBubbleSprite.enabled = false;
 
         generateCharacterTraits();
         generateCharacterAppearance();
@@ -368,7 +369,8 @@ public class Walker : MonoBehaviour
             }
             agent.isStopped = false;
             outlineSprite.enabled = false;
-            speechBubble.text = "";
+            speechBubbleText.text = "";
+            speechBubbleSprite.enabled = false;
         }
     }
 
@@ -377,14 +379,17 @@ public class Walker : MonoBehaviour
         switch (interactionState)
         {
             case InteractionState.None:
+                speechBubbleSprite.enabled = true;
                 greetPlayer();
                 interactionState = InteractionState.Greeted;
                 break;
             case InteractionState.Greeted:
+                speechBubbleSprite.enabled = false;
                 rewardLeaflet(currentLeaflet);
                 interactionState = InteractionState.OwningLeaflet;
                 break;
             case InteractionState.OwningLeaflet:
+                speechBubbleSprite.enabled = true;
                 respondAlreadyReceivedLeaflet();
                 break;
         }
@@ -416,7 +421,7 @@ public class Walker : MonoBehaviour
 
         greeting = firstName + " " + "(" + age + "): " + "»" + greeting + "«";
         Debug.Log(greeting);
-        speechBubble.text = greeting;
+        speechBubbleText.text = greeting;
     }
     public void rewardLeaflet(Leaflets.Leaflet currentLeaflet)
     {
@@ -461,8 +466,6 @@ public class Walker : MonoBehaviour
                 factor ++;
             }
 
-            //factor += evalDiff(politicalStance_leaf, politicalStance);
-
 
 
             IEnumerable<Party> intersectingParties = partyAffiliationsArray.Intersect(currentLeaflet.Parties);
@@ -471,7 +474,7 @@ public class Walker : MonoBehaviour
 
             interactionState = InteractionState.OwningLeaflet;
 
-        speechBubble.text = "";
+        speechBubbleText.text = "";
             Debug.Log(Mathf.Max(0, (int)factor * 10));
             playerScript.applyReward(Mathf.Max(0, (int)factor * 10));
         
@@ -480,7 +483,7 @@ public class Walker : MonoBehaviour
 
     void respondAlreadyReceivedLeaflet()
     {
-        speechBubble.text = "Ich habe schon ein Flugblatt bekommen!";
+        speechBubbleText.text = "Ich habe schon ein Flugblatt bekommen!";
         Debug.Log("Ich habe schon ein Flugblatt bekommen!");
     }
 
